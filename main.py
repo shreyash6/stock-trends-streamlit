@@ -1,7 +1,7 @@
 ## Integrate our code OpenAI API
 import os
 import dotenv
-from constants import openai_key
+#from constants import openai_key
 from langchain.llms import OpenAI
 from langchain import PromptTemplate
 from langchain.chains import LLMChain
@@ -14,7 +14,8 @@ import streamlit as st
 
 dotenv.load_dotenv() 
 
-os.environ["OPENAI_API_KEY"]=openai_key
+#os.environ["OPENAI_API_KEY"]=openai_key
+os.getenv("OPENAI_API_KEY")
 
 # streamlit framework
 
