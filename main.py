@@ -1,5 +1,6 @@
 ## Integrate our code OpenAI API
 import os
+import dotenv
 from constants import openai_key
 from langchain.llms import OpenAI
 from langchain import PromptTemplate
@@ -10,6 +11,8 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import SequentialChain
 
 import streamlit as st
+
+dotenv.load_dotenv() 
 
 os.environ["OPENAI_API_KEY"]=openai_key
 
